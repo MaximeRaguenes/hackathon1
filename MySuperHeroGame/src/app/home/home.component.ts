@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   heroes;
   herop1;
   herop2;
+  showPlayButton = false;
 
   constructor(
     private http: HttpClient,
@@ -30,6 +31,7 @@ export class HomeComponent implements OnInit {
       this.herop1 = selectedHero;
     } else {
       this.herop2 = selectedHero;
+      this.showPlayButton = true;
     }
   }
 }
