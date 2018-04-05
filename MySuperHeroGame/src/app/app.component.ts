@@ -7,7 +7,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'My Heroes game';
   heroes;
+  hero;
+  hero2;
 
   constructor(private http: HttpClient){
   }
@@ -16,5 +19,15 @@ export class AppComponent {
       console.log(heroes);
       this.heroes = heroes;
     });
+  }
+  selectHero(hero, hero2) {
+    console.log(hero, hero2);
+    this.hero = hero;
+    this.hero2 = hero2;
+    if (hero == false) {
+    this.hero = hero;
+    } else {
+    this.hero2 = hero2;      
+    }
   }
 }

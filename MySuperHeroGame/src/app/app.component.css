@@ -1,0 +1,10 @@
+.imgHeroes {
+    display: inline-block;
+}
+.p1, .p2 {
+    border: solid 2px black;
+    height: 240px;
+    width: 160px;
+    margin: 2em;
+    display: inline-block;
+}
