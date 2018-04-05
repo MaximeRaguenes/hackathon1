@@ -9,10 +9,10 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   title = 'My Heroes game';
   heroes;
-  hero;
-  hero2;
+  herop1;
+  herop2;
 
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient) {
   }
   ngOnInit(): void {
     this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json').subscribe(heroes => {
@@ -20,14 +20,12 @@ export class AppComponent {
       this.heroes = heroes;
     });
   }
-  selectHero(hero, hero2) {
-    console.log(hero, hero2);
-    this.hero = hero;
-    this.hero2 = hero2;
-    if (hero == false) {
-    this.hero = hero;
+  selectHero(selectedHero) {
+    console.log(selectedHero);
+    if (!this.herop1) {
+      this.herop1 = selectedHero;
     } else {
-    this.hero2 = hero2;      
+      this.herop2 = selectedHero;
     }
   }
 }

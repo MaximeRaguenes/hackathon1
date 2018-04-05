@@ -5,16 +5,18 @@
   </h1>
 </div>
 
+<div class="container-fluid row justify-content-center">
+  <div class="p1 mx-auto">
+    <img src="{{ herop1.images.sm }}">
+  </div>
+  <div class="p2 mx-auto">
+    <img src="{{ herop2.images.sm }}">
+  </div>
+</div>
 
-<div class="p1">
-  <img src="{{ hero.images.sm }}">
-</div>
-<div class="p2">
-  <img src="{{ hero2.images.sm }}">
-</div>
-<div class="row">
-  <div class="col-12 imgHeroes" *ngFor="let hero of heroes; let i = index">
-    <a href="#" *ngIf="i < 20">
+<div class="container-fluid row justify-content-center">
+  <div class="imgHeroes" *ngFor="let hero of heroes; let i = index">
+    <a href="#" *ngIf="i < 50">
       <img (click)="selectHero(hero)" class="imgHero" src="{{ hero.images.xs }}" alt="images of heroes">
     </a>
   </div>
