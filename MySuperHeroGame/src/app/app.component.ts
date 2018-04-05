@@ -7,13 +7,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  heroes;
 
   constructor(private http: HttpClient){
   }
   ngOnInit(): void {
-    this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json').subscribe(data => {
-      console.log(data);
+    this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json').subscribe(heroes => {
+      console.log(heroes);
+      this.heroes = heroes;
     });
   }
 }
