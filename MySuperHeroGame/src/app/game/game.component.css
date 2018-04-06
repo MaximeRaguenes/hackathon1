@@ -1,6 +1,12 @@
 .p1, .p2 {
+    background: black;
     border: solid 2px black;
-    height: 244px;
-    width: 164px;
+    position: relative;
+    margin-top: 10em;
     display: inline-block;
+    color: darkorange;
+    font-weight: bold;
+}
+p {
+    text-align: center;
 }
