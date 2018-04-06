@@ -25,7 +25,5 @@ export class GameComponent implements OnInit {
   get herop2() {
     return this.playersService.herop2;
   }
-  refresh(): void {
-    window.location.reload();
-  }
+
 }
