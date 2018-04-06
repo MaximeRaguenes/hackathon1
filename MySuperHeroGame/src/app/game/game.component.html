@@ -5,16 +5,24 @@
     <img src="{{ herop1.images.sm }}">
     <div class="hpPlayer">
       <p> HP : {{hpPlayer1}}</p>
+      <div class="btnAtq">
+        <button (click)="attackP1()"> Attack </button>
+        <button (click)="magieP1()"> Magie </button>
+        <button (click)="healingP1()"> Heal </button>
+      </div>
     </div>
   </div>
-<div class="btnAtq">
-  <button (click)="attack()"> Attack </button>
-</div>
+
   <div class="p2 mx-auto">
     <p>{{ herop2.name }}</p>
     <img src="{{ herop2.images.sm }}">
     <div class="hpPlayer">
       <p> HP : {{hpPlayer2}}</p>
+      <div class="btnAtq">
+        <button (click)="attackP2()"> Attack </button>
+        <button (click)="magieP2()"> Magie </button>
+        <button (click)="healingP2()"> Heal </button>
+      </div>
     </div>
   </div>
 
