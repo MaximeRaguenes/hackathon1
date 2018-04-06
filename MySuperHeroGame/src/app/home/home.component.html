@@ -1,7 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    <span class="titre"> {{ title }} </span>
+
   </h1>
 </div>
 
@@ -9,9 +10,11 @@
   <div class="p1 mx-auto">
     <img *ngIf="herop1" src="{{ herop1.images.sm }}">
   </div>
-  <button class="start" routerLink="/game" [disabled]="!showPlayButton">
-    START GAME
-  </button>
+  <div>
+    <a routerLink="/game">
+      <img src="assets/pressstart.gif" alt="">
+    </a>
+  </div>
   <div class="p2 mx-auto">
     <img *ngIf="herop2" src="{{ herop2.images.sm }}">
   </div>
@@ -19,7 +22,7 @@
 
 <div class="container-fluid row justify-content-center">
   <div class="imgHeroes" *ngFor="let hero of heroes; let i = index">
-    <a *ngIf="i < 100">
+    <a *ngIf="i < 48">
       <img (click)="selectHero(hero)" class="imgHero" src="{{ hero.images.xs }}" alt="images of heroes">
     </a>
   </div>

@@ -13,8 +13,8 @@ import { PlayersService } from './../players.service';
 })
 export class GameComponent implements OnInit {
   atq: boolean;
-  hpPlayer1 = 500;
-  hpPlayer2 = 500;
+  hpPlayer1 = 300;
+  hpPlayer2 = 300;
   showPlayButton = false;
 
   constructor(
