@@ -1,14 +1,16 @@
-<button routerLink="/home">Go Home</button>
+<button class="btnCenter" routerLink="/home">Back to Home</button>
 <div class="container-fluid row justify-content-center">
   <div class="p1 mx-auto">
     <p>{{ herop1.name }}</p>
     <img src="{{ herop1.images.sm }}">
     <div class="hpPlayer">
       <p> HP : {{hpPlayer1}}</p>
-      <div class="btnAtq">
-        <button (click)="attackP1()"> Attack </button>
-        <button (click)="magieP1()"> Magie </button>
-        <button (click)="healingP1()"> Heal </button>
+      <div class="container-fluid row mx-auto">
+        <div class="btnAtq">
+          <button class="col btnCenter" (click)="attackP1()" [disabled]="showPlayButton"> Attack </button>
+          <button class="col btnCenter" (click)="magieP1()" [disabled]="showPlayButton"> Magie </button>
+          <button class="col btnCenter" (click)="healingP1()" [disabled]="showPlayButton"> Heal </button>
+        </div>
       </div>
     </div>
   </div>
@@ -18,10 +20,12 @@
     <img src="{{ herop2.images.sm }}">
     <div class="hpPlayer">
       <p> HP : {{hpPlayer2}}</p>
-      <div class="btnAtq">
-        <button (click)="attackP2()"> Attack </button>
-        <button (click)="magieP2()"> Magie </button>
-        <button (click)="healingP2()"> Heal </button>
+      <div class="container-fluid row mx-auto">
+        <div class="btnAtq">
+          <button class="col btnCenter" (click)="attackP2()" [disabled]="!showPlayButton"> Attack </button>
+          <button class="col btnCenter" class="col btnCenter" (click)="magieP2()" [disabled]="!showPlayButton"> Magie </button>
+          <button class="col btnCenter" (click)="healingP2()" [disabled]="!showPlayButton"> Heal </button>
+        </div>
       </div>
     </div>
   </div>

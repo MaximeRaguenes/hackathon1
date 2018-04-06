@@ -2,11 +2,18 @@
     background: black;
     border: solid 2px black;
     position: relative;
-    margin-top: 10em;
+    margin-top: 5em;
     display: inline-block;
     color: darkorange;
     font-weight: bold;
+    width: 164px;
 }
 p {
     text-align: center;
+}
+.btnCenter {
+    border-radius: 50px 8px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    font-style: italic;
 }
