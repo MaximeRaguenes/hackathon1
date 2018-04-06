@@ -1,12 +1,21 @@
 <button routerLink="/home">Go Home</button>
 <div class="container-fluid row justify-content-center">
   <div class="p1 mx-auto">
-      <p>{{ herop1.name }}</p>    
+    <p>{{ herop1.name }}</p>
     <img src="{{ herop1.images.sm }}">
+    <div class="hpPlayer">
+      <p> HP : {{hpPlayer1}}</p>
+    </div>
+  </div>
+<div class="btnAtq">
+  <button (click)="attack()"> Attack </button>
+</div>
+  <div class="p2 mx-auto">
+    <p>{{ herop2.name }}</p>
+    <img src="{{ herop2.images.sm }}">
+    <div class="hpPlayer">
+      <p> HP : {{hpPlayer2}}</p>
+    </div>
   </div>
 
-  <div class="p2 mx-auto">
-      <p>{{ herop2.name }}</p>    
-    <img src="{{ herop2.images.sm }}">
-  </div>
 </div>

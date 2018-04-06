@@ -12,6 +12,9 @@ import { PlayersService } from './../players.service';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
+  atq: boolean;
+  hpPlayer1 = 500;
+  hpPlayer2 = 500;
 
   constructor(
     private playersService: PlayersService,
@@ -25,5 +28,10 @@ export class GameComponent implements OnInit {
   get herop2() {
     return this.playersService.herop2;
   }
-
+  attack(atq) {
+      this.hpPlayer2 = this.hpPlayer2 - this.playersService.herop1.powerstats.combat;
+      if (this.hpPlayer2 <= 0) {
+        alert(' Winner is :  {{ playersService.herop1.name }}' );
+      }
+    }
 }

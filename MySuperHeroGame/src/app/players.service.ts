@@ -5,7 +5,7 @@ export class PlayersService {
 
   herop1;
   herop2;
-  
+
   constructor() { }
 
 }
