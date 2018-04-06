@@ -20,6 +20,8 @@ export class HomeComponent implements OnInit {
     private router: Router) {
   }
   ngOnInit(): void {
+    this.playersService.herop1 = null;
+    this.playersService.herop2 = null;
     this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json').subscribe(heroes => {
       console.log(heroes);
       this.heroes = heroes;
