@@ -35,7 +35,7 @@ export class GameComponent implements OnInit {
     this.hpPlayer2 = this.hpPlayer2 - this.playersService.herop1.powerstats.combat;
     if (this.hpPlayer2 <= 0) {
       this.hpPlayer2 = 0;
-      alert(' Winner is ' + this.herop1.name);
+      alert(' Winner is ' + this.herop1.name + ' From ' + this.playersService.herop1.biography.publisher);
       setTimeout(() => {
         this.router.navigate(['/home']);
       }, 1000);
@@ -44,9 +44,13 @@ export class GameComponent implements OnInit {
   magieP1(mage) {
     this.showPlayButton = true;
     this.hpPlayer2 = this.hpPlayer2 - this.playersService.herop1.powerstats.intelligence;
+
     if (this.hpPlayer2 <= 0) {
       this.hpPlayer2 = 0;
-      alert(' Winner is ' + this.herop1.name);
+      alert(' Winner is ' + this.herop1.name + ' From ' + this.playersService.herop1.biography.publisher);
+      setTimeout(() => {
+        this.router.navigate(['/home']);
+      }, 1000);
     }
   }
   healingP1(heal) {
@@ -59,7 +63,7 @@ export class GameComponent implements OnInit {
     this.hpPlayer1 = this.hpPlayer1 - this.playersService.herop2.powerstats.combat;
     if (this.hpPlayer1 <= 0) {
       this.hpPlayer1 = 0;
-      alert(' Winner is ' + this.herop2.name);
+      alert(' Winner is ' + this.herop2.name + ' From ' + this.playersService.herop2.biography.publisher);
       setTimeout(() => {
         this.router.navigate(['/home']);
       }, 1000);
@@ -70,7 +74,10 @@ export class GameComponent implements OnInit {
     this.hpPlayer1 = this.hpPlayer1 - this.playersService.herop2.powerstats.intelligence;
     if (this.hpPlayer1 <= 0) {
       this.hpPlayer1 = 0;
-      alert(' Winner is ' + this.herop2.name);
+      alert(' Winner is ' + this.herop2.name + ' From ' + this.playersService.herop2.biography.publisher);
+      setTimeout(() => {
+        this.router.navigate(['/home']);
+      }, 1000);
     }
   }
   healingP2(heal) {
@@ -78,3 +85,4 @@ export class GameComponent implements OnInit {
     this.hpPlayer2 = this.hpPlayer2 + 80;
   }
 }
+
