@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { PlayersService } from './../players.service';
+
 
 
 
@@ -12,9 +14,15 @@ import { Router } from '@angular/router';
 export class GameComponent implements OnInit {
 
   constructor(
+    private playersService: PlayersService,
     private router: Router) { }
 
   ngOnInit() {
   }
-
+  get herop1() {
+    return this.playersService.herop1;
+  }
+  get herop2() {
+    return this.playersService.herop2;
+  }
 }

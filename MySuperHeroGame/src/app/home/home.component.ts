@@ -1,3 +1,4 @@
+import { PlayersService } from './../players.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -11,12 +12,11 @@ export class HomeComponent implements OnInit {
 
   title = 'My Heroes game';
   heroes;
-  herop1;
-  herop2;
   showPlayButton = false;
 
   constructor(
     private http: HttpClient,
+    private playersService: PlayersService,
     private router: Router) {
   }
   ngOnInit(): void {
@@ -25,12 +25,21 @@ export class HomeComponent implements OnInit {
       this.heroes = heroes;
     });
   }
+
+  get herop1() {
+    return this.playersService.herop1;
+  }
+  get herop2() {
+    return this.playersService.herop2;
+  }
+
+
   selectHero(selectedHero) {
     console.log(selectedHero);
-    if (!this.herop1) {
-      this.herop1 = selectedHero;
+    if (!this.playersService.herop1) {
+      this.playersService.herop1 = selectedHero;
     } else {
-      this.herop2 = selectedHero;
+      this.playersService.herop2 = selectedHero;
       this.showPlayButton = true;
     }
   }
